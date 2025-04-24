@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Responsive bottom navigation</title>
+        <style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 22%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+/* div.gallery img {
+  width: 100%;
+  height: auto;
+} */
+
+div.desc {
+  padding: 5px;
+  text-align: center;
+}
+</style>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+*, *:after, *:before{
+  box-sizing: border-box;
+}
+
+html{
+  /* position: relative;
+  overflow: hidden;
+  font-size: 16px; */
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size:15px
+    }
+}
+
+@media screen and (max-width: 465px) {
+    html {
+        font-size:14px
+    }
+}
+
+body{
+  /* width: 100vw;
+  height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1rem; */
+  background: #f1f3f6;
+}
+
+.card{
+  width: 30rem;
+  /* height: 65vh !important; */
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1rem !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-holder{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.card-img-holder img{
+  width: 100%;
+  height: auto;
+  max-height: 15rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.blog-title{
+  color: #22215B;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.description{
+  padding: 1rem 0;
+  color: #22215B80;
+  font-size: 1rem;
+}
+
+.blog-time{
+  font-size: .8rem;
+  color: #22215B;
+}
+
+.options{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.options span{
+  font-weight: 600;
+  color: #22215B;
+}
+
+.btn{
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: 400;
+  background: #EEF7FE;
+  color: #22215B;
+  cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Avto Service Logo</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.php" class="nav__link active-link">
+                                <i class='bx bx-home-alt nav__icon'></i>
+                                <span class="nav__name">Asosiy</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                                <span class="nav__name">About</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="" class="nav__link">
+                                <i class='bx bx-book-alt nav__icon'></i>
+                                <span class="nav__name">Skills</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="" class="nav__link">
+                                <i class='bx bx-briefcase-alt nav__icon'></i>
+                                <span class="nav__name">Portfolio</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="" class="nav__link">
+                                <i class='bx bx-message-square-detail nav__icon'></i>
+                                <span class="nav__name">Contactme</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <img  src="https://img3.stockfresh.com/files/sstk/354/6625700-stock-vector-car-logo-vector-illustration-384697171.jpg" alt="" class="nav__img me-3">
+            </nav>
+        </header>
+
+        <main>
+        <div class="card mt-2">
+                        <div class="card-img-holder">
+                            <img src="https://chevrolet.uz/assets/images/lacetti/colors/4.png" alt="Blog image">
+                        </div>
+                        <h3 class="blog-title">Lacetti</h3>
+
+                       <div class="w-100" style="">
+
+                           <h3>Tanirovka</h3>
+                           <div class="w-100 d-flex">
+                                 
+                                <div class="gallery">
+                                <div class="w-100 bg-black" style="height: 5vh;">
+                                </div>
+                                <div class="desc">Qora 10%</div>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <h4>5$</h4>
+                                </div>
+                                </div>
+
+                                <div class="gallery">
+                                <div class="w-100 bg-black" style="height: 5vh;">
+                                </div>
+                                <div class="desc">Qora 30%</div>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <h4>5$</h4>
+                                </div>
+                                </div>
+
+                                <div class="gallery">
+                                <div class="w-100 bg-black" style="height: 5vh;">
+                                </div>
+                                <div class="desc">Qora 60%</div>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <h4>5$</h4>
+                                </div>
+                                </div>
+
+                                <div class="gallery">
+                                <div class="w-100 bg-black" style="height: 5vh;">
+                                </div>
+                                <div class="desc">Qora 70%</div>
+                                <div class="w-100 d-flex justify-content-center">
+                                    <h4>5$</h4>
+                                </div>
+                                </div>
+                           </div>
+                       </div>
+                        
+
+                       <div class="w-100 mt-1" style="">
+
+                        <h3>Palirovka</h3>
+                        <div class="w-100 d-flex">
+                            
+                            <div class="gallery">
+                            <div class="w-100 d-flex justify-content-center" style="height: 5vh;">
+                                <span>Nomi</span>
+                            </div>
+                            <!-- <div class="desc">Qora 10%</div> -->
+                            <div class="w-100 d-flex justify-content-center">
+                                <h4>5$</h4>
+                            </div>
+                            </div>
+
+                            <div class="gallery">
+                            <div class="w-100 d-flex justify-content-center" style="height: 5vh;">
+                                <span>Nomi1</span>
+                            </div>
+                            <!-- <div class="desc">Qora 10%</div> -->
+                            <div class="w-100 d-flex justify-content-center">
+                                <h4>10$</h4>
+                            </div>
+                            </div>
+
+                            <div class="gallery">
+                            <div class="w-100 d-flex justify-content-center" style="height: 5vh;">
+                                <span>Nomi2</span>
+                            </div>
+                            <!-- <div class="desc">Qora 10%</div> -->
+                            <div class="w-100 d-flex justify-content-center">
+                                <h4>15$</h4>
+                            </div>
+                            </div>                       
+                        </div>
+                       </div>
+
+                       <div class="w-100 mt-1" style="">
+
+                        <h3>Keramika</h3>
+                        <div class="w-100 d-flex">
+                            
+                            <div class="gallery">
+                            <div class="w-100 d-flex justify-content-center" style="height: 5vh;">
+                                <span>Nomi</span>
+                            </div>
+                            <!-- <div class="desc">Qora 10%</div> -->
+                            <div class="w-100 d-flex justify-content-center">
+                                <h4>5$</h4>
+                            </div>
+                            </div>
+
+                            <div class="gallery">
+                            <div class="w-100 d-flex justify-content-center" style="height: 5vh;">
+                                <span>Nomi1</span>
+                            </div>
+                            <!-- <div class="desc">Qora 10%</div> -->
+                            <div class="w-100 d-flex justify-content-center">
+                                <h4>10$</h4>
+                            </div>
+                            </div>
+
+                            <div class="gallery">
+                            <div class="w-100 d-flex justify-content-center" style="height: 5vh;">
+                                <span>Nomi1</span>
+                            </div>
+                            <!-- <div class="desc">Qora 10%</div> -->
+                            <div class="w-100 d-flex justify-content-center">
+                                <h4>15$</h4>
+                            </div>
+                            </div>
+
+                            <div class="gallery">
+                            <div class="w-100 d-flex justify-content-center" style="height: 5vh;">
+                                <span>Nomi2</span>
+                            </div>
+                            <!-- <div class="desc">Qora 10%</div> -->
+                            <div class="w-100 d-flex justify-content-center">
+                                <h4>20$</h4>
+                            </div>
+                            </div>                       
+                        </div>
+                       </div>
+
+                       <div class="w-100 mt-3" style="">
+
+                        <h4>Umumiy summa: <span>30$</span></h4>
+                        
+                       </div>
+                        
+                        <div class="options mt-1">
+                            <a href="" class="btn w-100">Buyurtma berish</a>
+                        </div>
+
+                            <div class="w-100" style="height: 10vh;">
+
+                            
+
+                            </div>
+                        </div>
+
+                        <!-- Buy me a coffe script -->
+                        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="vbattalshn" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+
+          
+            
+        </main>
+        
+
+        <!--=============== MAIN JS ===============-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

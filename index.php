@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Responsive bottom navigation</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+*, *:after, *:before{
+  box-sizing: border-box;
+}
+
+html{
+  /* position: relative;
+  overflow: hidden;
+  font-size: 16px; */
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size:15px
+    }
+}
+
+@media screen and (max-width: 465px) {
+    html {
+        font-size:14px
+    }
+}
+
+body{
+  /* width: 100vw;
+  height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1rem; */
+  background: #f1f3f6;
+}
+
+.card{
+  width: 30rem;
+  height: 65vh !important;
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1rem !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-holder{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.card-img-holder img{
+  width: 100%;
+  height: auto;
+  max-height: 15rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.blog-title{
+  color: #22215B;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.description{
+  padding: 1rem 0;
+  color: #22215B80;
+  font-size: 1rem;
+}
+
+.blog-time{
+  font-size: .8rem;
+  color: #22215B;
+}
+
+.options{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.options span{
+  font-weight: 600;
+  color: #22215B;
+}
+
+.btn{
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: 400;
+  background: #EEF7FE;
+  color: #22215B;
+  cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Avto Service Logo</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="" class="nav__link active-link">
+                                <i class="fa-solid fa-house nav__icon mt-1"></i>
+                                <span class="nav__name">Asosiy</span>
+                            </a>
+                        </li>
+                        
+                
+
+                        <li class="nav__item">
+                            <a href="" class="nav__link">
+                                <i class="fa-solid fa-taxi nav__icon mt-1"></i>
+                                <span class="nav__name">Hizmat turlari</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="" class="nav__link mt-1">
+                            <i class="fa-solid fa-headset nav__icon"></i>
+                                <span class="nav__name">Aloqa</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="" class="nav__link">
+                                <i class="fa-regular fa-user nav__icon mt-1"></i>
+                                <span class="nav__name">Profil</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <img  src="https://img3.stockfresh.com/files/sstk/354/6625700-stock-vector-car-logo-vector-illustration-384697171.jpg" alt="" class="nav__img me-3">
+            </nav>
+        </header>
+
+        <main>
+        <div class="card mt-2">
+                        <div class="card-img-holder">
+                            <img src="https://chevrolet.uz/assets/images/lacetti/colors/4.png" alt="Blog image">
+                        </div>
+                        <h3 class="blog-title">Lacetti</h3>
+                        <span class="blog-time">Barcha turdagi ranglar.</span>
+                        <p class="description">
+                            O'z avtomobilingizga bizning barcha hizmatlarimiz bo'yicha tanishib chiqishingiz mumkin.
+                            Uning uchun Xizmatdan foydalanish tugmasini bosing.
+                        </p>
+                        <div class="options">
+                            <a href="lacetti.php" class="btn w-100">Xizmatdan foydalanish</a>
+                        </div>
+                        </div>
+
+                        <!-- Buy me a coffe script -->
+                        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="vbattalshn" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+
+                        <div class="card mt-3">
+                        <div class="card-img-holder">
+                            <img src="https://chevrolet.uz/assets/icons/new/Cobalt.png" alt="Blog image">
+                        </div>
+                        <h3 class="blog-title">Cobalt</h3>
+                        <span class="blog-time">Barcha turdagi ranglar.</span>
+                        <p class="description">
+                        O'z avtomobilingizga bizning barcha hizmatlarimiz bo'yicha tanishib chiqishingiz mumkin.
+                        Uning uchun Xizmatdan foydalanish tugmasini bosing.
+                        </p>
+                        <div class="options">
+                        <a href="cobalt.php" class="btn w-100">Xizmatdan foydalanish</a>
+                        </div>
+                        </div>
+
+                        <!-- Buy me a coffe script -->
+                        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="vbattalshn" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+
+                        <div class="card mt-3">
+                        <div class="card-img-holder">
+                            <img src="https://chevrolet.uz/assets/icons/new/onix.webp" alt="Blog image">
+                        </div>
+                        <h3 class="blog-title">Onix</h3>
+                        <span class="blog-time">Barcha turdagi ranglar.</span>
+                        <p class="description">
+                        O'z avtomobilingizga bizning barcha hizmatlarimiz bo'yicha tanishib chiqishingiz mumkin.
+                        Uning uchun Xizmatdan foydalanish tugmasini bosing.
+                        </p>
+                        <div class="options">
+                            <a href="onix.php" class="btn w-100">Xizmatdan foydalanish</a>
+                        </div>
+                        </div>
+
+
+                        <div class="card mt-3">
+                        <div class="card-img-holder">
+                            <img src="https://chevrolet.uz/assets/icons/new/malibu.webp" alt="Blog image">
+                        </div>
+                        <h3 class="blog-title">Malibu</h3>
+                        <span class="blog-time">Barcha turdagi ranglar.</span>
+                        <p class="description">
+                        O'z avtomobilingizga bizning barcha hizmatlarimiz bo'yicha tanishib chiqishingiz mumkin.
+                        Uning uchun Xizmatdan foydalanish tugmasini bosing.
+                        </p>
+                        <div class="options">
+                        <a href="malibu.php" class="btn w-100">Xizmatdan foydalanish</a>
+                        </div>
+                        </div>
+
+          
+            
+        </main>
+        
+
+        <!--=============== MAIN JS ===============-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
